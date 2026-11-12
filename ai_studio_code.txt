@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="35%" stop-color="#13235b"/>
+      <stop offset="70%" stop-color="#0a1236"/>
+      <stop offset="100%" stop-color="#040718"/>
+    </radialGradient>
+    
+    <radialGradient id="purpleAmbient" cx="85%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#6366f1" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="cyanAmbient" cx="15%" cy="85%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.38"/>
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Character Body 3D Ceramic Shading -->
+    <linearGradient id="bodyBase" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#f0f7ff"/>
+      <stop offset="55%" stop-color="#d4e4fc"/>
+      <stop offset="85%" stop-color="#9bb7e8"/>
+      <stop offset="100%" stop-color="#6889cb"/>
+    </linearGradient>
+
+    <linearGradient id="bodyRimLight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Visor Gradients -->
+    <linearGradient id="visorGlass" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#060e24"/>
+      <stop offset="50%" stop-color="#09183d"/>
+      <stop offset="100%" stop-color="#132b66"/>
+    </linearGradient>
+
+    <linearGradient id="visorGlassReflection" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glowing Cyan Eyes -->
+    <radialGradient id="eyeGlowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#7df9ff"/>
+      <stop offset="80%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#0099ff"/>
+    </radialGradient>
+
+    <!-- Golden Star Gradients & Filters -->
+    <linearGradient id="goldStarFacetL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="40%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+
+    <linearGradient id="goldStarFacetR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eab308"/>
+      <stop offset="60%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+
+    <radialGradient id="starAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fde047" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#eab308" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#ca8a04" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ca8a04" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glow Filters -->
+    <filter id="cyanBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur1"/>
+      <feGaussianBlur stdDeviation="30" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="starGlowFilter" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softDropShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="36" stdDeviation="32" flood-color="#020617" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="1024" height="1024" fill="url(#bgGlow)"/>
+  <rect width="1024" height="1024" fill="url(#purpleAmbient)"/>
+  <rect width="1024" height="1024" fill="url(#cyanAmbient)"/>
+
+  <!-- Magical Floating Sparkles / Bokeh -->
+  <g opacity="0.6">
+    <circle cx="210" cy="220" r="4" fill="#38bdf8" filter="url(#cyanBloom)"/>
+    <circle cx="820" cy="280" r="5" fill="#c084fc" filter="url(#cyanBloom)"/>
+    <circle cx="160" cy="740" r="3.5" fill="#38bdf8"/>
+    <circle cx="860" cy="710" r="4.5" fill="#fde047" opacity="0.8"/>
+    <circle cx="310" cy="140" r="2.5" fill="#ffffff"/>
+    <circle cx="730" cy="150" r="3" fill="#ffffff"/>
+    <!-- Soft background aura behind Mino -->
+    <circle cx="512" cy="512" r="320" fill="#00f2fe" opacity="0.08" filter="url(#cyanBloom)"/>
+  </g>
+
+  <!-- ================= MINO MASCOT ================= -->
+  <g filter="url(#softDropShadow)">
+    
+    <!-- Cute Ear/Antenna Pods -->
+    <ellipse cx="225" cy="460" rx="28" ry="48" fill="#9cb7e8" transform="rotate(-15 225 460)"/>
+    <ellipse cx="225" cy="460" rx="22" ry="40" fill="#dbeafe" transform="rotate(-15 225 460)"/>
+    <circle cx="218" cy="450" r="8" fill="#00f2fe" filter="url(#cyanBloom)" opacity="0.8"/>
+
+    <ellipse cx="799" cy="460" rx="28" ry="48" fill="#8ba7db" transform="rotate(15 799 460)"/>
+    <ellipse cx="799" cy="460" rx="22" ry="40" fill="#cbdcf8" transform="rotate(15 799 460)"/>
+    <circle cx="806" cy="450" r="8" fill="#c084fc" filter="url(#cyanBloom)" opacity="0.8"/>
+
+    <!-- Pearl-White Main Ceramic Body -->
+    <path d="M 512 180 
+             C 730 180, 810 280, 810 500 
+             C 810 740, 720 830, 512 830 
+             C 304 830, 214 740, 214 500 
+             C 214 280, 294 180, 512 180 Z" 
+          fill="url(#bodyBase)"/>
+
+    <!-- Specular Highlight Curve (Top Crown) -->
+    <path d="M 320 250 
+             C 420 205, 604 205, 704 250 
+             C 640 220, 384 220, 320 250 Z" 
+          fill="#ffffff" opacity="0.85"/>
+
+    <!-- Left Cyan Bounce Light Edge -->
+    <path d="M 224 440 
+             C 216 520, 230 680, 320 770 
+             C 246 700, 224 570, 234 460 Z" 
+          fill="#00f2fe" opacity="0.5" filter="url(#cyanBloom)"/>
+
+    <!-- Body Border Contour / Specular Rim -->
+    <path d="M 512 180 
+             C 730 180, 810 280, 810 500 
+             C 810 740, 720 830, 512 830 
+             C 304 830, 214 740, 214 500 
+             C 214 280, 294 180, 512 180 Z" 
+          fill="none" stroke="url(#bodyRimLight)" stroke-width="9"/>
+
+    <!-- Soft Cheek Blushes -->
+    <ellipse cx="320" cy="565" rx="36" ry="20" fill="#f472b6" opacity="0.38" filter="url(#cyanBloom)"/>
+    <ellipse cx="704" cy="565" rx="36" ry="20" fill="#f472b6" opacity="0.38" filter="url(#cyanBloom)"/>
+
+    <!-- ================= FACE VISOR ================= -->
+    <!-- Visor Bevel / Socket -->
+    <rect x="290" y="342" width="444" height="236" rx="118" fill="#15264f" opacity="0.9"/>
+    
+    <!-- Visor High-Gloss Faceplate -->
+    <rect x="296" y="348" width="432" height="224" rx="112" fill="url(#visorGlass)"/>
+    <rect x="296" y="348" width="432" height="224" rx="112" fill="none" stroke="#2563eb" stroke-width="3" opacity="0.6"/>
+
+    <!-- Curved Gloss Specular Sheen across visor -->
+    <path d="M 320 410 
+             C 380 365, 644 365, 704 410 
+             C 670 380, 354 380, 320 410 Z" 
+          fill="#ffffff" opacity="0.45"/>
+    <ellipse cx="610" cy="385" rx="55" ry="12" fill="#ffffff" opacity="0.3" transform="rotate(-10 610 385)"/>
+
+    <!-- ================= EXPRESSIVE CYAN EYES ================= -->
+    <g filter="url(#cyanBloom)">
+      <!-- Left Eye Outer Glow Capsule -->
+      <rect x="382" y="415" width="56" height="88" rx="28" fill="url(#eyeGlowGrad)"/>
+      <!-- Left Eye Center Glint -->
+      <ellipse cx="398" cy="440" rx="12" ry="18" fill="#ffffff"/>
+      <circle cx="414" cy="476" r="6" fill="#ffffff" opacity="0.8"/>
+
+      <!-- Right Eye Outer Glow Capsule -->
+      <rect x="586" y="415" width="56" height="88" rx="28" fill="url(#eyeGlowGrad)"/>
+      <!-- Right Eye Center Glint -->
+      <ellipse cx="602" cy="440" rx="12" ry="18" fill="#ffffff"/>
+      <circle cx="618" cy="476" r="6" fill="#ffffff" opacity="0.8"/>
+    </g>
+
+    <!-- Subtle Friendly Visor Smile -->
+    <path d="M 488 522 Q 512 538 536 522" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.75" filter="url(#cyanBloom)"/>
+
+    <!-- ================= CHEST GOLDEN STAR ================= -->
+    <!-- Star Magical Ambient Halo -->
+    <circle cx="512" cy="682" r="95" fill="url(#starAura)"/>
+    <circle cx="512" cy="682" r="45" fill="#fde047" opacity="0.6" filter="url(#starGlowFilter)"/>
+
+    <!-- Faceted 3D Beveled Star -->
+    <!-- Center of star: 512, 682 -->
+    <!-- Top point: 512, 620 -->
+    <!-- Right-top: 570, 662 -->
+    <!-- Right-bot: 548, 728 -->
+    <!-- Left-bot: 476, 728 -->
+    <!-- Left-top: 454, 662 -->
+    <!-- Inner valleys: 
+         Top-R: 534, 658
+         Bot-R: 532, 694
+         Bottom: 512, 698
+         Bot-L: 492, 694
+         Top-L: 490, 658
+    -->
+    <g filter="url(#starGlowFilter)">
+      <!-- Star Facets Light / Dark for 3D Relief -->
+      <!-- Top Spike (Left facet Light, Right facet Dark) -->
+      <polygon points="512,682 512,618 534,658" fill="url(#goldStarFacetL)"/>
+      <polygon points="512,682 512,618 490,658" fill="url(#goldStarFacetR)"/>
+
+      <!-- Right Spike -->
+      <polygon points="512,682 576,660 534,658" fill="url(#goldStarFacetL)"/>
+      <polygon points="512,682 576,660 534,696" fill="url(#goldStarFacetR)"/>
+
+      <!-- Bottom Right Spike -->
+      <polygon points="512,682 552,732 534,696" fill="url(#goldStarFacetL)"/>
+      <polygon points="512,682 552,732 512,700" fill="url(#goldStarFacetR)"/>
+
+      <!-- Bottom Left Spike -->
+      <polygon points="512,682 472,732 512,700" fill="url(#goldStarFacetL)"/>
+      <polygon points="512,682 472,732 490,696" fill="url(#goldStarFacetR)"/>
+
+      <!-- Left Spike -->
+      <polygon points="512,682 448,660 490,696" fill="url(#goldStarFacetL)"/>
+      <polygon points="512,682 448,660 490,658" fill="url(#goldStarFacetR)"/>
+
+      <!-- Center Intense Glint -->
+      <circle cx="512" cy="682" r="7" fill="#ffffff"/>
+    </g>
+
+    <!-- Star Outer Diamond Sparkles -->
+    <path d="M 512 602 L 515 612 L 525 615 L 515 618 L 512 628 L 509 618 L 499 615 L 509 612 Z" fill="#ffffff" filter="url(#cyanBloom)"/>
+    <path d="M 596 682 L 598 688 L 604 690 L 598 692 L 596 698 L 594 692 L 488 690 L 594 688 Z" fill="#fde047"/>
+    <path d="M 428 682 L 430 688 L 436 690 L 430 692 L 428 698 L 426 692 L 420 690 L 426 688 Z" fill="#fde047"/>
+  </g>
+</svg>
